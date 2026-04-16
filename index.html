@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ultimate Java Interview Preparation Guide with 350+ topics, detailed explanations, internal working, and code examples.">
+  <title>Java Interview Master — Complete Guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+<div class="bg-glow-2"></div>
+<div class="sidebar-overlay"></div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-left">
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <a class="logo" href="#">
+      <div class="logo-icon">☕</div>
+      <span class="logo-text">Java Interview Master</span>
+      <span class="logo-badge">350+ Topics</span>
+    </a>
+  </div>
+  <div class="search-container">
+    <span class="search-icon">🔍</span>
+    <input type="text" class="search-input" id="searchInput" placeholder="Search topics...">
+    <span class="search-shortcut">Ctrl+K</span>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+  <div class="header-stats">
+    <div class="stat-pill"><span class="num">31</span> Categories</div>
+    <div class="stat-pill"><span class="num">350+</span> Topics</div>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-progress">
+    <div class="progress-label"><span>Reading Progress</span><span id="progressLabel">0 topics read</span></div>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+  </div>
+  <div class="sidebar-label">🟢 Basic</div>
+  <div class="sidebar-section">
+    <a class="nav-item" href="#cat-1"><span class="nav-emoji">📦</span> Java Basics<span class="nav-count">34</span></a>
+    <a class="nav-item" href="#cat-2"><span class="nav-emoji">🧬</span> OOP Concepts<span class="nav-count">44</span></a>
+  </div>
+  <div class="sidebar-label">🟡 Intermediate</div>
+  <div class="sidebar-section">
+    <a class="nav-item" href="#cat-3"><span class="nav-emoji">🔤</span> String Handling<span class="nav-count">16</span></a>
+    <a class="nav-item" href="#cat-4"><span class="nav-emoji">⚠️</span> Exception Handling<span class="nav-count">22</span></a>
+    <a class="nav-item" href="#cat-5"><span class="nav-emoji">📦</span> Wrapper Classes<span class="nav-count">9</span></a>
+    <a class="nav-item" href="#cat-6"><span class="nav-emoji">🗂️</span> Collections<span class="nav-count">38</span></a>
+    <a class="nav-item" href="#cat-7"><span class="nav-emoji">🔣</span> Generics<span class="nav-count">13</span></a>
+  </div>
+  <div class="sidebar-label">🟠 Advanced</div>
+  <div class="sidebar-section">
+    <a class="nav-item" href="#cat-8"><span class="nav-emoji">🧵</span> Multithreading<span class="nav-count">50</span></a>
+    <a class="nav-item" href="#cat-9"><span class="nav-emoji">⚡</span> Java 8+ Features<span class="nav-count">23</span></a>
+    <a class="nav-item" href="#cat-10"><span class="nav-emoji">🆕</span> Java 9–21+<span class="nav-count">44</span></a>
+    <a class="nav-item" href="#cat-11"><span class="nav-emoji">📁</span> I/O &amp; Serialization<span class="nav-count">32</span></a>
+    <a class="nav-item" href="#cat-12"><span class="nav-emoji">🌐</span> Networking<span class="nav-count">9</span></a>
+  </div>
+  <div class="sidebar-label">🔴 Expert</div>
+  <div class="sidebar-section">
+    <a class="nav-item" href="#cat-13"><span class="nav-emoji">🧠</span> JVM Internals<span class="nav-count">34</span></a>
+    <a class="nav-item" href="#cat-14"><span class="nav-emoji">🏗️</span> Design Patterns<span class="nav-count">24</span></a>
+    <a class="nav-item" href="#cat-15"><span class="nav-emoji">🗄️</span> JDBC<span class="nav-count">16</span></a>
+    <a class="nav-item" href="#cat-16"><span class="nav-emoji">🪞</span> Reflection<span class="nav-count">13</span></a>
+    <a class="nav-item" href="#cat-17"><span class="nav-emoji">🎯</span> Inner Classes<span class="nav-count">8</span></a>
+    <a class="nav-item" href="#cat-18"><span class="nav-emoji">🏷️</span> Enums<span class="nav-count">11</span></a>
+    <a class="nav-item" href="#cat-19"><span class="nav-emoji">λ</span> Functional Prog<span class="nav-count">12</span></a>
+    <a class="nav-item" href="#cat-20"><span class="nav-emoji">🧪</span> Testing<span class="nav-count">21</span></a>
+    <a class="nav-item" href="#cat-21"><span class="nav-emoji">🔨</span> Build Tools<span class="nav-count">14</span></a>
+    <a class="nav-item" href="#cat-22"><span class="nav-emoji">📝</span> Logging<span class="nav-count">10</span></a>
+    <a class="nav-item" href="#cat-23"><span class="nav-emoji">🔒</span> Security<span class="nav-count">13</span></a>
+    <a class="nav-item" href="#cat-24"><span class="nav-emoji">⚙️</span> Memory &amp; Perf<span class="nav-count">15</span></a>
+    <a class="nav-item" href="#cat-25"><span class="nav-emoji">📦</span> Modules (JPMS)<span class="nav-count">10</span></a>
+    <a class="nav-item" href="#cat-26"><span class="nav-emoji">🌍</span> i18n &amp; l10n<span class="nav-count">7</span></a>
+    <a class="nav-item" href="#cat-27"><span class="nav-emoji">💾</span> JPA / Hibernate<span class="nav-count">12</span></a>
+    <a class="nav-item" href="#cat-28"><span class="nav-emoji">🍃</span> Spring Framework<span class="nav-count">18</span></a>
+    <a class="nav-item" href="#cat-29"><span class="nav-emoji">☁️</span> Microservices<span class="nav-count">16</span></a>
+    <a class="nav-item" href="#cat-30"><span class="nav-emoji">🎲</span> Miscellaneous<span class="nav-count">38</span></a>
+    <a class="nav-item" href="#cat-31"><span class="nav-emoji">💻</span> Coding Problems<span class="nav-count">40</span></a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main-content" id="mainContent">
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="hero-title">☕ Java Interview Master</h1>
+  <p class="hero-subtitle">The ultimate guide covering 350+ topics with detailed explanations, internal working diagrams, and production-ready code examples.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hero-stat-value">31</div><div class="hero-stat-label">Categories</div></div>
+    <div class="hero-stat"><div class="hero-stat-value">350+</div><div class="hero-stat-label">Topics</div></div>
+    <div class="hero-stat"><div class="hero-stat-value">200+</div><div class="hero-stat-label">Examples</div></div>
+    <div class="hero-stat"><div class="hero-stat-value">All</div><div class="hero-stat-label">Levels</div></div>
+  </div>
+</section>
+
+<!-- ========== CATEGORY 1: JAVA BASICS ========== -->
+<section class="category-section" id="cat-1">
+<div class="category-header">
+  <div class="category-emoji">📦</div>
+  <div class="category-info"><h2 class="category-title">Java Basics & Fundamentals</h2><div class="category-count">34 topics</div></div>
+  <span class="category-level level-basic">Basic</span>
+</div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">01</span><span class="topic-title">What is Java? Features of Java</span><span class="topic-tag tag-frequently-asked">FAQ</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<h4>Explanation</h4>
+<p>Java is a <strong>high-level, class-based, object-oriented</strong> programming language designed to have as few implementation dependencies as possible. It was developed by <strong>James Gosling</strong> at Sun Microsystems (now Oracle) and released in 1995.</p>
+<h4>Key Features</h4>
+<ul>
+  <li><strong>Platform Independent</strong> — "Write Once, Run Anywhere" (WORA). Java code compiles to bytecode that runs on any JVM.</li>
+  <li><strong>Object-Oriented</strong> — Everything is an object (except primitives). Supports Encapsulation, Inheritance, Polymorphism, Abstraction.</li>
+  <li><strong>Robust</strong> — Strong memory management, no pointers, garbage collection, exception handling.</li>
+  <li><strong>Secure</strong> — No explicit pointer access, bytecode verifier, SecurityManager, class loading mechanism.</li>
+  <li><strong>Multithreaded</strong> — Built-in support for concurrent programming.</li>
+  <li><strong>Architecture-Neutral</strong> — Bytecode is not dependent on any processor architecture.</li>
+  <li><strong>Distributed</strong> — Supports RMI, EJB, web services for distributed computing.</li>
+  <li><strong>Dynamic</strong> — Supports dynamic loading of classes at runtime via reflection.</li>
+</ul>
+<div class="info-box tip"><div class="info-box-title">💡 Interview Tip</div><p>Often the first question asked. Cover at least 5 features with brief explanations.</p></div>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">02</span><span class="topic-title">JDK vs JRE vs JVM</span><span class="topic-tag tag-frequently-asked">FAQ</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<h4>Explanation</h4>
+<p>These three form the foundation of Java's platform independence:</p>
+<table class="comparison-table">
+<tr><th>Component</th><th>Full Form</th><th>Purpose</th><th>Contains</th></tr>
+<tr><td><strong>JVM</strong></td><td>Java Virtual Machine</td><td>Executes bytecode</td><td>Interpreter, JIT Compiler, GC</td></tr>
+<tr><td><strong>JRE</strong></td><td>Java Runtime Environment</td><td>Provides runtime libraries</td><td>JVM + Core Libraries (rt.jar)</td></tr>
+<tr><td><strong>JDK</strong></td><td>Java Development Kit</td><td>Develop + Compile + Run</td><td>JRE + javac, javadoc, jar, jdb</td></tr>
+</table>
+<h4>Internal Working</h4>
+<div class="diagram-box">┌─────────────────────────────────────┐
+│              JDK                    │
+│  ┌──────────────────────────────┐   │
+│  │            JRE               │   │
+│  │  ┌───────────────────────┐   │   │
+│  │  │         JVM           │   │   │
+│  │  │  ┌─────────────────┐  │   │   │
+│  │  │  │   Class Loader   │  │   │   │
+│  │  │  │   Bytecode       │  │   │   │
+│  │  │  │   Verifier       │  │   │   │
+│  │  │  │   Interpreter    │  │   │   │
+│  │  │  │   JIT Compiler   │  │   │   │
+│  │  │  │   Garbage        │  │   │   │
+│  │  │  │   Collector      │  │   │   │
+│  │  │  └─────────────────┘  │   │   │
+│  │  └───────────────────────┘   │   │
+│  │  + Core Libraries (rt.jar)   │   │
+│  └──────────────────────────────┘   │
+│  + javac (compiler)                 │
+│  + javadoc, jar, jdb, jshell        │
+└─────────────────────────────────────┘</div>
+<div class="info-box"><div class="info-box-title">📌 Key Point</div><p><strong>JDK = JRE + Dev Tools</strong> and <strong>JRE = JVM + Libraries</strong>. If you only need to run Java programs, you need JRE. To develop, you need JDK.</p></div>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">03</span><span class="topic-title">How JVM Works — ClassLoader, Bytecode, JIT</span><span class="topic-tag tag-important">Important</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<h4>Java Program Execution Flow</h4>
+<div class="diagram-box">Source.java ──> javac ──> Source.class (Bytecode)
+                                │
+                          ┌─────▼─────┐
+                          │    JVM    │
+                          ├───────────┤
+                   ┌──────┤ClassLoader├──────┐
+                   │      └───────────┘      │
+                   ▼                         ▼
+            ┌────────────┐          ┌──────────────┐
+            │ Bytecode   │          │  Runtime     │
+            │ Verifier   │          │  Data Areas  │
+            └──────┬─────┘          │  - Heap      │
+                   │                │  - Stack     │
+                   ▼                │  - Method    │
+            ┌────────────┐          │    Area      │
+            │ Interpreter│          └──────────────┘
+            │     +      │
+            │ JIT Compiler│
+            └──────┬─────┘
+                   ▼
+            Native Machine Code</div>
+<h4>ClassLoader Subsystem</h4>
+<ul>
+  <li><strong>Bootstrap ClassLoader</strong> — Loads core Java classes from <code>rt.jar</code> (written in C/C++)</li>
+  <li><strong>Extension/Platform ClassLoader</strong> — Loads from <code>ext</code> directory</li>
+  <li><strong>Application ClassLoader</strong> — Loads from classpath (your classes)</li>
+</ul>
+<h4>JIT Compiler</h4>
+<p>The <strong>Just-In-Time (JIT)</strong> compiler converts frequently executed bytecode ("hot spots") into native machine code at runtime for better performance. Without JIT, the interpreter translates bytecode line-by-line which is slower.</p>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">04</span><span class="topic-title">main() Method — Why public static void main(String[] args)?</span><span class="topic-tag tag-tricky">Tricky</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<h4>Breakdown</h4>
+<ul>
+  <li><strong>public</strong> — JVM must access it from anywhere (outside the class)</li>
+  <li><strong>static</strong> — JVM calls it without creating an object of the class</li>
+  <li><strong>void</strong> — It doesn't return anything to the JVM</li>
+  <li><strong>main</strong> — The name JVM looks for as the entry point</li>
+  <li><strong>String[] args</strong> — Command-line arguments passed as an array of Strings</li>
+</ul>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="kw">public class</span> <span class="type">HelloWorld</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="type">String</span>[] args) {
+        <span class="type">System</span>.out.<span class="fn">println</span>(<span class="str">"Hello, World!"</span>);
+    }
+}</pre></div>
+<div class="info-box warning"><div class="info-box-title">⚠️ Common Question</div><p><strong>Can we overload main()?</strong> Yes! But JVM always calls <code>public static void main(String[] args)</code>. Other overloaded versions are treated as normal methods.</p></div>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">05</span><span class="topic-title">Data Types — Primitive & Non-Primitive</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<h4>Primitive Data Types (8 types)</h4>
+<table class="comparison-table">
+<tr><th>Type</th><th>Size</th><th>Default</th><th>Range</th></tr>
+<tr><td><code>byte</code></td><td>1 byte</td><td>0</td><td>-128 to 127</td></tr>
+<tr><td><code>short</code></td><td>2 bytes</td><td>0</td><td>-32,768 to 32,767</td></tr>
+<tr><td><code>int</code></td><td>4 bytes</td><td>0</td><td>-2³¹ to 2³¹-1</td></tr>
+<tr><td><code>long</code></td><td>8 bytes</td><td>0L</td><td>-2⁶³ to 2⁶³-1</td></tr>
+<tr><td><code>float</code></td><td>4 bytes</td><td>0.0f</td><td>±3.4E38 (7 digits)</td></tr>
+<tr><td><code>double</code></td><td>8 bytes</td><td>0.0d</td><td>±1.7E308 (15 digits)</td></tr>
+<tr><td><code>char</code></td><td>2 bytes</td><td>'\u0000'</td><td>0 to 65,535 (Unicode)</td></tr>
+<tr><td><code>boolean</code></td><td>~1 bit</td><td>false</td><td>true / false</td></tr>
+</table>
+<h4>Non-Primitive Types</h4>
+<p><strong>String, Array, Class, Interface, Enum</strong> — These are reference types stored on the Heap, while primitives are stored on the Stack.</p>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="cmt">// Primitive types</span>
+<span class="kw">int</span> age = <span class="num">25</span>;
+<span class="kw">double</span> salary = <span class="num">75000.50</span>;
+<span class="kw">char</span> grade = <span class="str">'A'</span>;
+<span class="kw">boolean</span> isActive = <span class="kw">true</span>;
+
+<span class="cmt">// Non-primitive (reference) types</span>
+<span class="type">String</span> name = <span class="str">"Java"</span>;
+<span class="kw">int</span>[] numbers = {<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>};</pre></div>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">06</span><span class="topic-title">Variables — Local, Instance, Static & Scope</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<table class="comparison-table">
+<tr><th>Type</th><th>Declared In</th><th>Stored In</th><th>Default Value</th><th>Lifetime</th></tr>
+<tr><td><strong>Local</strong></td><td>Method/Block</td><td>Stack</td><td>None (must init)</td><td>Method execution</td></tr>
+<tr><td><strong>Instance</strong></td><td>Class (non-static)</td><td>Heap</td><td>Yes (0, null, false)</td><td>Object lifetime</td></tr>
+<tr><td><strong>Static</strong></td><td>Class (static)</td><td>Method Area</td><td>Yes (0, null, false)</td><td>Class lifetime</td></tr>
+</table>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="kw">public class</span> <span class="type">Employee</span> {
+    <span class="kw">static</span> <span class="type">String</span> company = <span class="str">"Google"</span>;  <span class="cmt">// Static variable</span>
+    <span class="type">String</span> name;                       <span class="cmt">// Instance variable</span>
+
+    <span class="kw">void</span> <span class="fn">display</span>() {
+        <span class="kw">int</span> bonus = <span class="num">5000</span>;              <span class="cmt">// Local variable</span>
+        <span class="type">System</span>.out.<span class="fn">println</span>(name + <span class="str">" - "</span> + company + <span class="str">" - Bonus: "</span> + bonus);
+    }
+}</pre></div>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">07</span><span class="topic-title">Type Casting — Widening & Narrowing</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<h4>Widening (Implicit) — Automatic</h4>
+<p>Smaller type → Larger type. No data loss. Done automatically by compiler.</p>
+<div class="diagram-box">byte → short → int → long → float → double</div>
+<h4>Narrowing (Explicit) — Manual cast required</h4>
+<p>Larger type → Smaller type. Possible data loss. Requires explicit cast.</p>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="cmt">// Widening (implicit)</span>
+<span class="kw">int</span> i = <span class="num">100</span>;
+<span class="kw">long</span> l = i;       <span class="cmt">// int → long automatically</span>
+<span class="kw">double</span> d = l;     <span class="cmt">// long → double automatically</span>
+
+<span class="cmt">// Narrowing (explicit)</span>
+<span class="kw">double</span> price = <span class="num">99.99</span>;
+<span class="kw">int</span> rounded = (<span class="kw">int</span>) price;  <span class="cmt">// 99 (decimal truncated)</span>
+<span class="kw">byte</span> b = (<span class="kw">byte</span>) <span class="num">130</span>;       <span class="cmt">// -126 (overflow!)</span></pre></div>
+</div></div></div>
+
+</section>
+
+<!-- ========== CATEGORY 2: OOP ========== -->
+<section class="category-section" id="cat-2">
+<div class="category-header">
+  <div class="category-emoji">🧬</div>
+  <div class="category-info"><h2 class="category-title">Object-Oriented Programming (OOP)</h2><div class="category-count">44 topics</div></div>
+  <span class="category-level level-basic">Basic</span>
+</div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">01</span><span class="topic-title">Classes and Objects</span><span class="topic-tag tag-frequently-asked">FAQ</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<h4>Explanation</h4>
+<p>A <strong>Class</strong> is a blueprint/template that defines the structure (fields) and behavior (methods). An <strong>Object</strong> is an instance of a class — a real entity created in memory.</p>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="cmt">// Class = Blueprint</span>
+<span class="kw">public class</span> <span class="type">Car</span> {
+    <span class="type">String</span> brand;
+    <span class="kw">int</span> speed;
+
+    <span class="kw">void</span> <span class="fn">accelerate</span>() {
+        speed += <span class="num">10</span>;
+        <span class="type">System</span>.out.<span class="fn">println</span>(brand + <span class="str">" speed: "</span> + speed);
+    }
+}
+
+<span class="cmt">// Object = Instance</span>
+<span class="type">Car</span> myCar = <span class="kw">new</span> <span class="type">Car</span>();   <span class="cmt">// Object created on Heap</span>
+myCar.brand = <span class="str">"Tesla"</span>;
+myCar.<span class="fn">accelerate</span>();       <span class="cmt">// Tesla speed: 10</span></pre></div>
+<h4>Internal Working — Memory Layout</h4>
+<div class="diagram-box">Stack Memory           Heap Memory
+┌──────────┐          ┌──────────────────┐
+│ myCar ───┼─────────►│ Car Object       │
+│ (ref)    │          │ brand = "Tesla"  │
+└──────────┘          │ speed = 10       │
+                      └──────────────────┘</div>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">02</span><span class="topic-title">Four Pillars of OOP — Encapsulation, Inheritance, Polymorphism, Abstraction</span><span class="topic-tag tag-frequently-asked">FAQ</span><span class="topic-tag tag-important">Important</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<h4>1. Encapsulation</h4>
+<p>Wrapping data (variables) and code (methods) together as a single unit. Achieved via <strong>private fields + public getters/setters</strong>.</p>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="kw">public class</span> <span class="type">BankAccount</span> {
+    <span class="kw">private</span> <span class="kw">double</span> balance;  <span class="cmt">// hidden from outside</span>
+
+    <span class="kw">public double</span> <span class="fn">getBalance</span>() { <span class="kw">return</span> balance; }
+    <span class="kw">public void</span> <span class="fn">deposit</span>(<span class="kw">double</span> amount) {
+        <span class="kw">if</span> (amount > <span class="num">0</span>) balance += amount;  <span class="cmt">// validation</span>
+    }
+}</pre></div>
+<h4>2. Inheritance</h4>
+<p>A class (child) acquires properties and behaviors of another class (parent). Uses <code>extends</code> keyword. Promotes code reusability.</p>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="kw">class</span> <span class="type">Animal</span> {
+    <span class="kw">void</span> <span class="fn">eat</span>() { <span class="type">System</span>.out.<span class="fn">println</span>(<span class="str">"Eating..."</span>); }
+}
+<span class="kw">class</span> <span class="type">Dog</span> <span class="kw">extends</span> <span class="type">Animal</span> {
+    <span class="kw">void</span> <span class="fn">bark</span>() { <span class="type">System</span>.out.<span class="fn">println</span>(<span class="str">"Barking!"</span>); }
+}
+<span class="cmt">// Dog inherits eat() from Animal</span>
+<span class="type">Dog</span> d = <span class="kw">new</span> <span class="type">Dog</span>();
+d.<span class="fn">eat</span>();   <span class="cmt">// Eating...</span>
+d.<span class="fn">bark</span>();  <span class="cmt">// Barking!</span></pre></div>
+<h4>3. Polymorphism</h4>
+<p>One interface, multiple implementations. Two types: <strong>Compile-time</strong> (overloading) and <strong>Runtime</strong> (overriding).</p>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="cmt">// Runtime Polymorphism</span>
+<span class="type">Animal</span> a = <span class="kw">new</span> <span class="type">Dog</span>();    <span class="cmt">// Upcasting</span>
+a.<span class="fn">sound</span>();               <span class="cmt">// Calls Dog's sound() — decided at RUNTIME</span></pre></div>
+<h4>4. Abstraction</h4>
+<p>Hiding implementation details and showing only functionality. Achieved via <strong>abstract classes</strong> and <strong>interfaces</strong>.</p>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="kw">abstract class</span> <span class="type">Shape</span> {
+    <span class="kw">abstract double</span> <span class="fn">area</span>();  <span class="cmt">// no body — subclass must implement</span>
+}
+<span class="kw">class</span> <span class="type">Circle</span> <span class="kw">extends</span> <span class="type">Shape</span> {
+    <span class="kw">double</span> radius;
+    <span class="kw">double</span> <span class="fn">area</span>() { <span class="kw">return</span> Math.PI * radius * radius; }
+}</pre></div>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">03</span><span class="topic-title">Constructors — Default, Parameterized, Copy, Chaining</span><span class="topic-tag tag-frequently-asked">FAQ</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<h4>What is a Constructor?</h4>
+<p>A special method called automatically when an object is created. It has the <strong>same name as the class</strong> and <strong>no return type</strong>.</p>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="kw">public class</span> <span class="type">Student</span> {
+    <span class="type">String</span> name;
+    <span class="kw">int</span> age;
+
+    <span class="cmt">// Default constructor</span>
+    <span class="type">Student</span>() {
+        <span class="kw">this</span>(<span class="str">"Unknown"</span>, <span class="num">0</span>);  <span class="cmt">// Constructor chaining</span>
+    }
+
+    <span class="cmt">// Parameterized constructor</span>
+    <span class="type">Student</span>(<span class="type">String</span> name, <span class="kw">int</span> age) {
+        <span class="kw">this</span>.name = name;
+        <span class="kw">this</span>.age = age;
+    }
+
+    <span class="cmt">// Copy constructor</span>
+    <span class="type">Student</span>(<span class="type">Student</span> other) {
+        <span class="kw">this</span>.name = other.name;
+        <span class="kw">this</span>.age = other.age;
+    }
+}</pre></div>
+<div class="info-box"><div class="info-box-title">📌 Key Points</div><p>• Compiler adds a default no-arg constructor <strong>only if you don't define any</strong>.<br>• <code>this()</code> must be the <strong>first statement</strong> in a constructor.<br>• Constructors are <strong>NOT inherited</strong>.</p></div>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">04</span><span class="topic-title">Method Overloading vs Method Overriding</span><span class="topic-tag tag-frequently-asked">FAQ</span><span class="topic-tag tag-important">Important</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<table class="comparison-table">
+<tr><th>Feature</th><th>Overloading</th><th>Overriding</th></tr>
+<tr><td>Binding</td><td>Compile-time (Static)</td><td>Runtime (Dynamic)</td></tr>
+<tr><td>Class</td><td>Same class</td><td>Parent-Child classes</td></tr>
+<tr><td>Method Name</td><td>Same</td><td>Same</td></tr>
+<tr><td>Parameters</td><td>Must differ</td><td>Must be same</td></tr>
+<tr><td>Return Type</td><td>Can differ</td><td>Same or covariant</td></tr>
+<tr><td>Access Modifier</td><td>Can differ</td><td>Cannot be more restrictive</td></tr>
+<tr><td>static methods</td><td>Can overload</td><td>Cannot override (method hiding)</td></tr>
+<tr><td>private methods</td><td>Can overload</td><td>Cannot override</td></tr>
+</table>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="cmt">// OVERLOADING — same class, different params</span>
+<span class="kw">class</span> <span class="type">Calculator</span> {
+    <span class="kw">int</span> <span class="fn">add</span>(<span class="kw">int</span> a, <span class="kw">int</span> b)           { <span class="kw">return</span> a + b; }
+    <span class="kw">double</span> <span class="fn">add</span>(<span class="kw">double</span> a, <span class="kw">double</span> b) { <span class="kw">return</span> a + b; }
+    <span class="kw">int</span> <span class="fn">add</span>(<span class="kw">int</span> a, <span class="kw">int</span> b, <span class="kw">int</span> c)   { <span class="kw">return</span> a + b + c; }
+}
+
+<span class="cmt">// OVERRIDING — parent-child, same signature</span>
+<span class="kw">class</span> <span class="type">Animal</span> {
+    <span class="kw">void</span> <span class="fn">sound</span>() { <span class="type">System</span>.out.<span class="fn">println</span>(<span class="str">"Generic sound"</span>); }
+}
+<span class="kw">class</span> <span class="type">Cat</span> <span class="kw">extends</span> <span class="type">Animal</span> {
+    <span class="ann">@Override</span>
+    <span class="kw">void</span> <span class="fn">sound</span>() { <span class="type">System</span>.out.<span class="fn">println</span>(<span class="str">"Meow!"</span>); }
+}
+
+<span class="type">Animal</span> a = <span class="kw">new</span> <span class="type">Cat</span>();
+a.<span class="fn">sound</span>();  <span class="cmt">// "Meow!" — runtime polymorphism</span></pre></div>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">05</span><span class="topic-title">Abstract Class vs Interface</span><span class="topic-tag tag-frequently-asked">FAQ</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<table class="comparison-table">
+<tr><th>Feature</th><th>Abstract Class</th><th>Interface</th></tr>
+<tr><td>Methods</td><td>Abstract + Concrete</td><td>Abstract + default + static + private (Java 9+)</td></tr>
+<tr><td>Variables</td><td>Any type</td><td>Only public static final</td></tr>
+<tr><td>Constructors</td><td>Yes</td><td>No</td></tr>
+<tr><td>Multiple Inheritance</td><td>No (single extends)</td><td>Yes (multiple implements)</td></tr>
+<tr><td>Access Modifiers</td><td>Any</td><td>Methods are public by default</td></tr>
+<tr><td>When to use</td><td>IS-A + shared code</td><td>CAN-DO (capability)</td></tr>
+<tr><td>Performance</td><td>Slightly faster</td><td>Slightly slower (indirection)</td></tr>
+</table>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="cmt">// Abstract class — HAS shared code</span>
+<span class="kw">abstract class</span> <span class="type">Vehicle</span> {
+    <span class="kw">int</span> speed;
+    <span class="kw">void</span> <span class="fn">stop</span>() { speed = <span class="num">0</span>; }  <span class="cmt">// concrete method</span>
+    <span class="kw">abstract void</span> <span class="fn">start</span>();       <span class="cmt">// must be implemented</span>
+}
+
+<span class="cmt">// Interface — defines CONTRACT</span>
+<span class="kw">interface</span> <span class="type">Flyable</span> {
+    <span class="kw">void</span> <span class="fn">fly</span>();
+    <span class="kw">default void</span> <span class="fn">land</span>() { <span class="type">System</span>.out.<span class="fn">println</span>(<span class="str">"Landing..."</span>); }
+}
+
+<span class="cmt">// A class can extend ONE class + implement MANY interfaces</span>
+<span class="kw">class</span> <span class="type">Helicopter</span> <span class="kw">extends</span> <span class="type">Vehicle</span> <span class="kw">implements</span> <span class="type">Flyable</span> {
+    <span class="kw">void</span> <span class="fn">start</span>() { <span class="type">System</span>.out.<span class="fn">println</span>(<span class="str">"Rotor starting..."</span>); }
+    <span class="kw">public void</span> <span class="fn">fly</span>() { <span class="type">System</span>.out.<span class="fn">println</span>(<span class="str">"Flying!"</span>); }
+}</pre></div>
+</div></div></div>
+
+<div class="topic-card"><div class="topic-header"><span class="topic-number">06</span><span class="topic-title">SOLID Principles</span><span class="topic-tag tag-important">Important</span><span class="topic-toggle">▼</span></div><div class="topic-body"><div class="topic-content">
+<ul>
+  <li><strong>S — Single Responsibility</strong>: A class should have only one reason to change.</li>
+  <li><strong>O — Open/Closed</strong>: Open for extension, closed for modification.</li>
+  <li><strong>L — Liskov Substitution</strong>: Subtypes must be substitutable for their base types.</li>
+  <li><strong>I — Interface Segregation</strong>: Many specific interfaces > one general-purpose interface.</li>
+  <li><strong>D — Dependency Inversion</strong>: Depend on abstractions, not concretions.</li>
+</ul>
+<div class="code-block"><div class="code-header"><div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div><span class="code-lang">Java</span><button class="code-copy">Copy</button></div><pre><span class="cmt">// ❌ Violates SRP — class does too much</span>
+<span class="kw">class</span> <span class="type">UserService</span> {
+    <span class="kw">void</span> <span class="fn">createUser</span>() { }
+    <span class="kw">void</span> <span class="fn">sendEmail</span>() { }      <span class="cmt">// separate concern!</span>
+    <span class="kw">void</span> <span class="fn">generateReport</span>() { } <span class="cmt">// separate concern!</span>
+}
+
+<span class="cmt">// ✅ Follows SRP — each class, one job</span>
+<span class="kw">class</span> <span class="type">UserService</span>   { <span class="kw">void</span> <span class="fn">createUser</span>() { } }
+<span class="kw">class</span> <span class="type">EmailService</span>  { <span class="kw">void</span> <span class="fn">sendEmail</span>() { } }
+<span class="kw">class</span> <span class="type">ReportService</span> { <span class="kw">void</span> <span class="fn">generateReport</span>() { } }
+
+<span class="cmt">// ✅ Dependency Inversion</span>
+<span class="kw">interface</span> <span class="type">NotificationService</span> { <span class="kw">void</span> <span class="fn">send</span>(<span class="type">String</span> msg); }
+<span class="kw">class</span> <span class="type">EmailNotification</span> <span class="kw">implements</span> <span class="type">NotificationService</span> {
+    <span class="kw">public void</span> <span class="fn">send</span>(<span class="type">String</span> msg) { <span class="cmt">/* email logic */</span> }
+}
+<span class="kw">class</span> <span class="type">OrderService</span> {
+    <span class="kw">private</span> <span class="type">NotificationService</span> notifier; <span class="cmt">// depends on abstraction</span>
+    <span class="type">OrderService</span>(<span class="type">NotificationService</span> ns) { <span class="kw">this</span>.notifier = ns; }
+}</pre></div>
+</div></div></div>
+
+</section>
+
+<!-- Remaining categories will be loaded from topics.js -->
+<div id="dynamic-content"></div>
+
+</main>
+
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="app.js"></script>
+<script src="topics.js"></script>
+<script src="topics-part2.js"></script>
+<script src="topics-part3.js"></script>
+</body>
+</html>
